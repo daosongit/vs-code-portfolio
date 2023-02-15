@@ -24,7 +24,13 @@ export default function ActivityBar() {
         rowGap: '15px',
       }}>
       {menuList.map((el) => (
-        <Tooltip key={el.title} title={el.title} placement="right" describeChild arrow>
+        <Tooltip
+          key={el.title}
+          title={el.title}
+          placement="right"
+          describeChild
+          arrow
+          disableTouchListener>
           <Button
             sx={{
               p: 0,
@@ -32,7 +38,7 @@ export default function ActivityBar() {
               color: '#a0a0a0',
               borderLeft: '1px solid transparent',
               borderRadius: 0,
-              '&:hover': { color: '#ffffff' },
+              '&:hover': { color: { md: '#ffffff' } },
             }}
             disableRipple>
             {el.icon}

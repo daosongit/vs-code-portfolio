@@ -1,13 +1,4 @@
-import {
-  Box,
-  Collapse,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  ListSubheader,
-  Typography,
-} from '@mui/material';
+import { Box, Collapse, List, ListItemButton, ListSubheader, Typography } from '@mui/material';
 import { useState } from 'react';
 import { IoIosArrowForward as IcoArrowLeft, IoIosArrowDown as IcoArrowDown } from 'react-icons/io';
 import { RiReactjsFill as IcoReact } from 'react-icons/ri';
@@ -47,6 +38,7 @@ export default function Explorer() {
           <List disablePadding>
             {explorerList.map((el) => (
               <ListItemButton
+                key={el.title}
                 component="a"
                 href={el.link}
                 disableRipple

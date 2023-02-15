@@ -3,8 +3,8 @@ import { createTheme } from '@mui/material/styles';
 const theme = (mode: string) => {
   const isLight = mode === 'light'
   const options = {
-    breakpoints:{
-      keys: ['xs', 'xm', 'sm', 'md', 'lg', 'xl'],
+    breakpoints: {
+      // keys: Array('xs', 'xm', 'sm', 'md', 'lg', 'xl'),
       values: {
         xs: 0,
         xm: 400,

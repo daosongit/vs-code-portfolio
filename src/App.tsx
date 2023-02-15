@@ -6,7 +6,6 @@ import { useAppSelector } from './redux/store';
 
 export default function App() {
   const themeMode = useAppSelector((state) => state.theme.state);
-  console.log('themeMode = ', themeMode);
   const th = useMemo(() => theme(themeMode), [themeMode]);
 
   return (

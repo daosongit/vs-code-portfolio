@@ -2,9 +2,9 @@ import { Box, Button, Tooltip } from '@mui/material';
 import { ImFilesEmpty as IcoExplorer } from 'react-icons/im';
 import { IoIosGitBranch as IcoGit } from 'react-icons/io';
 import { CiLight as IcoLight, CiDark as IcoDark } from 'react-icons/ci';
-import { useAppDispatch, useAppSelector } from '../../../redux/store';
+import { useAppDispatch, useAppSelector } from '../../redux/store';
 import { FC, ReactElement } from 'react';
-import { changeTheme } from '../../../redux/themeSlice';
+import { changeTheme } from '../../redux/themeSlice';
 
 interface MenuItemProps {
   title: string;

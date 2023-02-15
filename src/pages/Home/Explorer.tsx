@@ -2,12 +2,13 @@ import { Box, Collapse, List, ListItemButton, ListSubheader, Typography } from '
 import { useState } from 'react';
 import { IoIosArrowForward as IcoArrowLeft, IoIosArrowDown as IcoArrowDown } from 'react-icons/io';
 import { RiReactjsFill as IcoReact } from 'react-icons/ri';
+import { NavLink } from 'react-router-dom';
 
 export default function Explorer() {
   const [open, setOpen] = useState(true);
   const explorerList = [
-    { title: 'Portfolio', icon: <IcoReact />, link: '#' },
-    { title: 'Snake', icon: <IcoReact />, link: '#' },
+    { title: 'Portfolio', icon: <IcoReact />, link: '/portfolio' },
+    { title: 'Snake', icon: <IcoReact />, link: '/snake' },
   ];
   return (
     <Box
@@ -39,8 +40,8 @@ export default function Explorer() {
             {explorerList.map((el) => (
               <ListItemButton
                 key={el.title}
-                component="a"
-                href={el.link}
+                component={NavLink}
+                to={el.link}
                 disableRipple
                 sx={{ pl: '30px', width: '100%', columnGap: '5px', py: '5px' }}>
                 <Box component="span" display="flex" paddingLeft="10px" color="#4c96eb">

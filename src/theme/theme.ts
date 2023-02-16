@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = (mode: string) => {
+  console.log('theme');
   const isLight = mode === 'light';
   const options = {
     breakpoints: {
